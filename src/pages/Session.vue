@@ -4,7 +4,7 @@
     <div class="content">
 
 
-    <div v-for="src in list" style="background-color:yellow;text-align:center;">
+    <div v-for="src in list" style="background-color:white;text-align:center;">
       <span style="font-size:20px;">Loading</span>
       <x-img :src="src" :webp-src="`${src}?type=webp`" @on-success="success" @on-error="error" class="ximg-demo" error-class="ximg-error" :offset="-100" container="#vux_view_box_body"></x-img>
     </div>

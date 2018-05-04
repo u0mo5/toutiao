@@ -6,11 +6,11 @@
     </router-link>
     <router-link to="/collect" class="navItem">
       <Icon type="ios-heart" class="navItem-icon"></Icon>
-      <span>收藏</span>
+      <span>语录</span>
     </router-link>
     <router-link to="/session" class="navItem">
       <Icon type="chatbubble-working" class="navItem-icon"></Icon>
-      <span>段子</span>
+      <span>美图</span>
     </router-link>
     <router-link to="/about" class="navItem">
       <Icon type="android-person" class="navItem-icon"></Icon>
