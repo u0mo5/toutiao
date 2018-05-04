@@ -8,22 +8,28 @@ import store from './store'
 Vue.config.productionTip = false
 
 import iView from 'iview'
+import Vuex from 'vuex'
 import 'iview/dist/styles/iview.css'
-
 import VueLazyload from 'vue-lazyload'
 
 Vue.use(iView)
+Vue.use(Vuex)
 Vue.use(VueLazyload, {
-  loading: './static/imgloading.jpg',
-  error: './static/imgerror.jpg',
-  preLoad: 1,
-  attempt: 1
+    loading: './static/imgloading.jpg',
+    error: './static/imgerror.jpg',
+    preLoad: 1,
+    attempt: 1
 })
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  render: (h) => h(App),
-  store
+    el: '#app',
+    router,
+    render: (h) => h(App),
+    store
 })
+
+import { AlertPlugin, ToastPlugin } from 'vux'
+
+Vue.use(AlertPlugin)
+Vue.use(ToastPlugin)
