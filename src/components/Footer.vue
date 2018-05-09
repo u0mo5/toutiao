@@ -4,7 +4,7 @@
       <Icon type="home" class="navItem-icon"></Icon>
       <span>首页</span>
     </router-link>
-    <router-link to="/collect" class="navItem">
+    <router-link to="/says" class="navItem">
       <Icon type="ios-heart" class="navItem-icon"></Icon>
       <span>语录</span>
     </router-link>

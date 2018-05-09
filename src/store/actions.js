@@ -1,6 +1,8 @@
 import * as type from './mutations_type.js'
 import jsonp from 'jsonp'
 // import axios from 'axios'
+import http from '@/service/http'
+import api from '@/config/api'
 
 export default {
   getNews ({ commit, state }, payload) {
