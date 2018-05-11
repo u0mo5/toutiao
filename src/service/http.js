@@ -2,8 +2,11 @@
 
 import axios from 'axios'
 import qs from 'qs'
-import { baseUrl } from '@/config/env'
+// import { baseUrl } from '@/config/env'
 import store from '@/store/index'
+
+// 配置API接口地址
+let baseUrl = process.env.API_ROOT;
 
 // 请求时的拦截
 axios.interceptors.request.use(config => {

@@ -21,12 +21,12 @@
         <img slot="header" :src="item.img" style="width:100%;display:block;">
           <div slot="content" class="card-padding">
             <p style="color:#999;font-size:12px;">{{ item.date }}</p>
-            <p style="font-size:14px;line-height:1.2;">{{ item.title }}</p>
+            <p style="font-size:28px;line-height:1.2;font-weight:bold">{{ item.title }}</p>
           </div>
         </card>
         <divider></divider>
     </li>
-    <ul>
+    </ul>
     </div>
     <c-footer></c-footer> 
   </div>
@@ -90,7 +90,7 @@ export default {
   border-right: none;
 }
 .text-scroll p {
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   line-height: 30px;
 }

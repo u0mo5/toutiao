@@ -10,6 +10,8 @@ import Says from '../pages/Says.vue'
 import * as type from '../store/mutations_type.js'
 import store from '../store/index.js'
 
+import Demolist from '../pages/DemoList.vue'
+
 Vue.use(Router)
 
 const routes = [{
@@ -46,6 +48,11 @@ const routes = [{
         path: '/content/:id',
         name: 'content',
         component: Content
+    },
+    {
+        path: '/demolist',
+        name: 'demolist',
+        component: Demolist
     },
     {
         path: '*',

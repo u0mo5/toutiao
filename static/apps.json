@@ -1,0 +1,47 @@
+{
+    "data": [{
+            "media_name": "新京报政事儿1",
+            "action": "alert",
+            "uri": "/says",
+            "icon": "http://android-artworks.25pp.com/fs08/2018/04/27/10/110_c2b695a11716750d162518c4661ce9f7_con_130x130.png"
+        },
+        {
+            "media_name": "天气",
+            "uri": "/home",
+            "icon": "http://img5sw.baidu.com/soft/3f/12026/1155149c6ee7151ba4478faa29c25110.png?version=2219537257"
+        },
+        {
+            "media_name": "历史五千年",
+            "uri": "/about",
+            "icon": "http://p1.pstatp.com/list/1b840005bc59cc3e1308"
+        },
+        {
+            "media_name": "历史五千年",
+            "icon": "http://p1.pstatp.com/list/1b840005bc59cc3e1308"
+        },
+        {
+            "media_name": "历史五千年",
+            "icon": "http://img5sw.baidu.com/soft/3f/12026/1155149c6ee7151ba4478faa29c25110.png?version=2219537257"
+        },
+        {
+            "media_name": "历史五千年",
+            "icon": "http://p1.pstatp.com/list/1b840005bc59cc3e1308"
+        },
+        {
+            "media_name": "历史五千年",
+            "icon": "http://p1.pstatp.com/list/1b840005bc59cc3e1308"
+        },
+        {
+            "media_name": "历史五千年",
+            "icon": "http://p1.pstatp.com/list/1b840005bc59cc3e1308"
+        },
+        {
+            "media_name": "历史五千年",
+            "icon": "http://p1.pstatp.com/list/1b840005bc59cc3e1308"
+        },
+        {
+            "media_name": "历史五千年",
+            "icon": "http://p1.pstatp.com/list/1b840005bc59cc3e1308"
+        }
+    ]
+}

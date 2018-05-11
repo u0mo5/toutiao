@@ -8,9 +8,9 @@
       <Icon type="ios-heart" class="navItem-icon"></Icon>
       <span>语录</span>
     </router-link>
-    <router-link to="/session" class="navItem">
+    <router-link to="/demolist" class="navItem">
       <Icon type="chatbubble-working" class="navItem-icon"></Icon>
-      <span>美图</span>
+      <span>应用</span>
     </router-link>
     <router-link to="/about" class="navItem">
       <Icon type="android-person" class="navItem-icon"></Icon>

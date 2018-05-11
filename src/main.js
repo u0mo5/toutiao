@@ -12,6 +12,8 @@ import Vuex from 'vuex'
 import 'iview/dist/styles/iview.css'
 import VueLazyload from 'vue-lazyload'
 
+
+
 Vue.use(iView)
 Vue.use(Vuex)
 Vue.use(VueLazyload, {
