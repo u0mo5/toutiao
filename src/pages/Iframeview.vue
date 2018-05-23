@@ -2,39 +2,14 @@
   <div>
     <c-back class="header"></c-back>
     <div class="content">
-      <swiper auto height="100px">
-      <swiper-item class="black"><h2 class="title fadeInUp animated">它无孔不入</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">你无处可藏</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">不是它可恶</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">而是它不懂你</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">我们试图</h2></swiper-item>
-      <swiper-item class="black"><h2 class="title fadeInUp animated">做些改变</h2></swiper-item>
-      </swiper>
 
+        <!-- 详情{{this.$route.query.link}} -->
 
       <!-- start -->
 
       <!-- end -->
 
-  <div class="demo-list-box" id="demo_list_box" :style="{height: `${height}px`}">
-      <flexbox :gutter="0" v-for="(row,i) in listTemp" :key="i">
-        <flexbox-item :span="1/3"  v-for="(cell,j) in row" :key="j" class="cbox vux-1px-t vux-tap-active">
-        <router-link :to="{ path: '/iframeview', query: { link: cell.link } }">
-        <!-- <a :href=cell.link   target="_blank"  > -->
-          <div class="vux-1px-r cbox-inner">
-            <span class="demo-icon demo-icon-big"  :style="{color: cell.color}">
-              <img :src="cell.icon" class="img-icon" />
-    
-            </span>
-            <br>
-            <span :style="{fontSize: cell.length > 12 ? '12px' : ''}">{{cell.media_name }}</span>
-          </div>
-        <!-- </a> -->
-    </router-link>
-        </flexbox-item>
-      </flexbox>
-    </div>
-
+    <iframe v-show="iframeState" id="show-iframe" frameborder=0 name="showHere" scrolling=auto src=""></iframe>
 
 
 <!-- sdf -->
@@ -106,14 +81,19 @@ export default {
           }
         });
       } else if (!action) {
-        this.$route.push({path:'/iframe',query:{link:`${name}`}});
-        // this.$router.push(`${name}`);
+        this.$router.push(`${name}`);
       } else {
-        this.$route.push({path:'/iframe',query:{link:`${name}`}});
+        this.$router.push(`${name}`);
       }
+    },
+    offIframe() {
+      this.goBackState = false;
+      this.iframeState = false;
+    },
+    showIframe() {
+      this.goBackState = true;
+      this.iframeState = true;
     }
-
-
   },
   components: {
     Swiper,
@@ -129,8 +109,38 @@ export default {
     FlexboxItem
   },
   mounted() {
-    this.fetchData(this.params);
-    this.height = window.innerHeight - 46 - 53;
+    console.log("mounted");
+    console.log(this.$route.query.link);
+    const oIframe = document.getElementById('show-iframe');
+    const deviceWidth = document.documentElement.clientWidth;
+    const deviceHeight = document.documentElement.clientHeight;
+    oIframe.style.width = deviceWidth + 'px';
+    oIframe.style.height = deviceHeight + 'px';
+   
+
+
+    this.showIframe();
+    let link=this.$route.query.link;
+    console.log(link);
+    document.getElementById('show-iframe').src=""+link;//跳转
+    // document.getElementById('show-iframe').contentWindow.location.reload(true);
+     console.log("mounted ok");
+     console.log( document.getElementById('show-iframe'));
+    // window.location.reload();
+
+            // DOM is now updated
+            //改变iframe src的值试试
+
+   
+  },
+  beforeUpdate(){
+    console.log("beforeUpdate");
+
+  },
+  destroyed(){
+    console.log("destory");
+    this.offIframe();
+    console.log("destory ok");
   }
 };
 </script>

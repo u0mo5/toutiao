@@ -71,6 +71,7 @@ export default {
     Divider
   },
   mounted() {
+    console.log("mounted");
     this.fetchData(this.params);
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="myBack">
-    <span @click="$router.back()"><Icon type="chevron-left" class="back-btn"></Icon></span>
+    <span @click="$router.go(-1)"><Icon type="chevron-left" class="back-btn"></Icon></span>
   </div>
 </template>
 <style lang="scss">

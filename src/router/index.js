@@ -7,6 +7,7 @@ import Session from '../pages/Session'
 import About from '../pages/About'
 import Content from '../pages/Content.vue'
 import Says from '../pages/Says.vue'
+import Iframeview from '../pages/Iframeview.vue'
 import * as type from '../store/mutations_type.js'
 import store from '../store/index.js'
 
@@ -53,6 +54,11 @@ const routes = [{
         path: '/demolist',
         name: 'demolist',
         component: Demolist
+    },
+    {
+        path: '/iframeview',
+        name: 'iframeview',
+        component: Iframeview
     },
     {
         path: '*',
